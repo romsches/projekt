@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/* Allgemeine Styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-main;
+    color: $black;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+main {
+    flex: 1; 
+}
+
+/* Header Styles */
+
+special-header {
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        hsl(0, 100%, 50%) 0%,
+        hsl(0, 63%, 28%) 15%,
+        hsl(0, 97%, 34%) 30%,
+        hsl(0, 100%, 60%) 45%
+    );
+    animation: diagonal alternate 40s infinite;
+}
+
+.header_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 35px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 345px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: $white;
+}
+
+a:hover {
+    color: $black;
+}
+
+.logo{
+    border-radius: 3.5px;
+    overflow: hidden;
+    color: transparent;
+}
+
+/* Footer Styles */
+
+special-footer {
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        hsl(0, 100%, 50%) 0%,
+        hsl(0, 63%, 28%) 15%,
+        hsl(0, 97%, 34%) 30%,
+        hsl(0, 100%, 60%) 45%
+    );
+    animation: diagonal alternate 40s infinite;
+    text-align: center;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 35px; 
+}
+
+.footer_container .logo {
+    margin-left: -45px;
+    padding-left: 0;
+}
+
+.footer_container .links{
+   margin-left: -200px;
+}
+
+.footer_container .links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer_container .links li {
+    display: inline;
+    margin-right: 10px; 
+}
+
+.footer_container .links a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer_container .links a:hover {
+    color: black;
+}
+
+.footer_container .apps {
+    display: flex;
+    align-items: center;
+}
+
+.footer_container .apps a {
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.footer_container .apps img {
+    width: 30px;
+    margin: 10px;
+}
+
+.footer_container .apps a:hover {
+    transform: scale(1.1);
+}
+
+.footer_container .apps a:active {
+    background-color: white;
+}
+
+.footer_container .links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.apps {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+
+.apps img {
+    transition: transform 0.3s ease;
+}
+
+.apps:hover img {
+    transform: scale(1.1); 
+}
+
+.apps a {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* Header&Footer Background-color */
+
+@keyframes diagonal {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@media (max-width: 1200px) {
+    header, footer {
+        padding: 20px;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            hsl(0, 100%, 50%) 0%,
+            hsl(0, 63%, 28%) 15%,
+            hsl(0, 97%, 34%) 30%,
+            hsl(0, 100%, 60%) 45%
+        );
+        animation: diagonal 40s infinite;
+        width: 100%;
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            rgb(255, 0, 0) 0%,  
+            hsl(0, 63%, 28%) 15%, 
+            rgb(171, 3, 3) 30%,  
+            hsl(0, 100%, 60%) 45%  
+        );
+        animation: diagonal 40s infinite;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .footer_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_container .links {
+        margin-left: 20px;
+    }
+
+    .container .logo {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+
+    nav ul {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 998px) {
+    header {
+        padding: 20px;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            hsl(0, 100%, 50%) 0%,
+            hsl(0, 63%, 28%) 15%,
+            hsl(0, 97%, 34%) 30%,
+            hsl(0, 100%, 60%) 45%
+        );
+        animation: diagonal 40s infinite;
+        width: 100%;
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        display: flex; /* Stelle den Header-Inhalt als Flexbox dar */
+        justify-content: space-around; /* Platzieren Sie die Elemente gleichmäßig */
+        align-items: center; /* Zentriere den Inhalt vertikal */
+    }
+
+    header .container {
+        display: flex; /* Stelle den Container als Flexbox dar */
+        justify-content: space-between; /* Platzieren Sie die Elemente gleichmäßig */
+        align-items: center; /* Zentriere den Inhalt vertikal */
+        width: 100%;
+        max-width: 1200px; /* Optional: Setze eine maximale Breite für den Container */
+        margin: 0 auto; /* Optional: Zentriere den Container auf dem Bildschirm */
+    }
+
+    header .container .logo {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 20px; /* Füge einen zusätzlichen Abstand zum Logo hinzu */
+        margin-bottom: 10px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            rgb(255, 0, 0) 0%,  
+            hsl(0, 63%, 28%) 15%, 
+            rgb(171, 3, 3) 30%,  
+            hsl(0, 100%, 60%) 45%  
+        );
+        animation: diagonal 40s infinite;
+        z-index: 1000;
+        display: flex; /* Stelle den Footer-Inhalt als Flexbox dar */
+        flex-direction: row; /* Ändere die Richtung auf Reihe (row) */
+        justify-content: space-around; /* Platzieren Sie die Elemente gleichmäßig */
+        align-items: center; /* Zentriere den Inhalt vertikal */
+    }
+
+    .footer_container {
+        display: flex; /* Stelle die Container-Elemente als Flexbox dar */
+        flex-wrap: wrap; /* Ermögliche den Umbruch auf die nächste Zeile, falls nötig */
+        justify-content: center; /* Zentriere die Container horizontal */
+        align-items: center; /* Zentriere die Container vertikal */
+    }
+
+    .footer_container .links {
+        margin-left: 20px; /* Füge Abstand zwischen den Links hinzu */
+    }
+
+    @keyframes diagonal {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            hsl(0, 100%, 50%) 0%,
+            hsl(0, 63%, 28%) 15%,
+            hsl(0, 97%, 34%) 30%,
+            hsl(0, 100%, 60%) 45% 
+        );
+        animation: diagonal 40s infinite;
+        width: 100%;
+        z-index: 1000; 
+        display: flex; /* Stelle den Header-Inhalt als Flexbox dar */
+        justify-content: space-around; /* Platzieren Sie die Elemente gleichmäßig */
+        align-items: center; /* Zentriere den Inhalt vertikal */
+    }
+
+    header .container {
+        display: flex; /* Stelle den Container als Flexbox dar */
+        justify-content: space-between; /* Platzieren Sie die Elemente gleichmäßig */
+        align-items: center; /* Zentriere den Inhalt vertikal */
+        width: 100%;
+        max-width: 1200px; /* Optional: Setze eine maximale Breite für den Container */
+        margin: 0 auto; /* Optional: Zentriere den Container auf dem Bildschirm */
+    }
+
+    header .container .logo {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 20px; /* Füge einen zusätzlichen Abstand zum Logo hinzu */
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            rgb(255, 0, 0) 0%,  
+            hsl(0, 63%, 28%) 15%, 
+            rgb(171, 3, 3) 30%,  
+            hsl(0, 100%, 60%) 45%  
+        );
+        animation: diagonal 40s infinite;
+        z-index: 1000; 
+        display: flex; /* Stelle den Footer-Inhalt als Flexbox dar */
+        flex-direction: row; /* Ändere die Richtung auf Reihe (row) */
+        justify-content: space-around; /* Platzieren Sie die Elemente gleichmäßig */
+        align-items: center; /* Zentriere den Inhalt vertikal */
+    }
+
+    @keyframes diagonal {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 20px;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            hsl(0, 100%, 50%) 0%,
+            hsl(0, 63%, 28%) 15%,
+            hsl(0, 97%, 34%) 30%,
+            hsl(0, 100%, 60%) 45% 
+        );
+        animation: diagonal 40s infinite;
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            rgb(255, 0, 0) 0%,  
+            hsl(0, 63%, 28%) 15%, 
+            rgb(171, 3, 3) 30%,  
+            hsl(0, 100%, 60%) 45%  
+        );
+        animation: diagonal 40s infinite;
+        z-index: 1000; 
+    }
+
+    @keyframes diagonal {
+        0% {background-position: 0% 50%}
+        100% {background-position: 100% 50%}
+    }
+}

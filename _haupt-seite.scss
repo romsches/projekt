@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+main{
+    padding:40px 0;
+    text-align: center;
+}
+
+.section_container,form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-top: 40px;
+}
+form label{
+    color:black;
+    display: block;
+    margin-bottom: 10px;
+}
+form label h1{
+    color: hsl(0, 100%, 50%);
+    font-size: xx-large;
+    padding: 10px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.form__checkbox {
+    margin-right: 10px; 
+}
+
+label {
+    font-size: 14px; 
+}
+label span {
+    font-weight: bold; 
+    color: #333; 
+}
+.checkbox input{
+    width: 20px;
+}
+
+form input{
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+form button{
+    background-color: #ccc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+form p{
+    align-items: center;
+    padding-top: 5px;
+}
+
+form a{
+    text-decoration-line:underline;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: black;
+    cursor: pointer;
+}
+
+form a:hover{
+    color: rgb(255, 0, 0);;
+}
+
+form button:hover{
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.24), 0 6px 18px 0 rgba(0,0,0,0.19);
+}
+
+form button:active{
+    background-color: rgb(255, 75, 75);
+    opacity: 1s;
+    transform: translateY(2.5px);
+}
+
+/* Media a max-width of 1200px */
+@media (max-width: 1200px) {
+    header {
+        padding: 20px;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            hsl(0, 100%, 50%) 0%,
+            hsl(0, 63%, 28%) 15%,
+            hsl(0, 97%, 34%) 30%,
+            hsl(0, 100%, 60%) 45% 
+        );
+        animation: diagonal 40s infinite;
+        width: 100%;
+        z-index: 1000;
+        position: fixed; 
+        top: 0; 
+    }
+
+    .werbung{
+        margin-bottom: 100px;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+        position: fixed; /* Fixed position to stay in place */
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            rgb(255, 0, 0) 0%,  
+            hsl(0, 63%, 28%) 15%, 
+            rgb(171, 3, 3) 30%,  
+            hsl(0, 100%, 60%) 45%  
+        );
+        animation: diagonal 40s infinite;
+        z-index: 1000;
+    }
+    
+    @keyframes diagonal {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+}
+
+/* Media a max-width of 998px */
+@media (max-width: 998px) {
+    header {
+        padding: 20px;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            hsl(0, 100%, 50%) 0%,
+            hsl(0, 63%, 28%) 15%,
+            hsl(0, 97%, 34%) 30%,
+            hsl(0, 100%, 60%) 45% 
+        );
+        animation: diagonal 40s infinite;
+        width: 100%; 
+    }
+
+    .section_container{
+        margin-top: 8%;
+    }
+
+    .werbung{
+        margin-bottom: 120px;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            rgb(255, 0, 0) 0%,  
+            hsl(0, 63%, 28%) 15%, 
+            rgb(171, 3, 3) 30%,  
+            hsl(0, 100%, 60%) 45%  
+        );
+        animation: diagonal 40s infinite;
+        
+    }
+    
+    @keyframes diagonal {
+        0% {background-position: 0% 50%}
+        100% {background-position: 100% 50%}
+    }
+}
+
+/* Media a max-width of 768px */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            hsl(0, 100%, 50%) 0%,
+            hsl(0, 63%, 28%) 15%,
+            hsl(0, 97%, 34%) 30%,
+            hsl(0, 100%, 60%) 45% 
+        );
+        animation: diagonal 40s infinite;
+        width: 100%;
+        z-index: 1000; /* Ensure the header is above other elements */
+    }
+
+    .werbung{
+        margin-bottom: 100px;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            rgb(255, 0, 0) 0%,  
+            hsl(0, 63%, 28%) 15%, 
+            rgb(171, 3, 3) 30%,  
+            hsl(0, 100%, 60%) 45%  
+        );
+        animation: diagonal 40s infinite;
+        z-index: 1000; /* Ensure the footer is above other elements */
+    }
+    
+    @keyframes diagonal {
+        0% {background-position: 0% 50%}
+        100% {background-position: 100% 50%}
+    }
+}
+
+/* Media a max-width of 576px */
+@media (max-width: 576px) {
+    header {
+        
+        padding: 20px;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            hsl(0, 100%, 50%) 0%,
+            hsl(0, 63%, 28%) 15%,
+            hsl(0, 97%, 34%) 30%,
+            hsl(0, 100%, 60%) 45% 
+        );
+        animation: diagonal 40s infinite;
+        width: 100%;
+        
+    }
+
+    .section_container{
+        margin-top: 20%;
+    }
+
+    .werbung{
+        margin-bottom: 120px;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-size: 500% 500%;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            rgb(255, 0, 0) 0%,  
+            hsl(0, 63%, 28%) 15%, 
+            rgb(171, 3, 3) 30%,  
+            hsl(0, 100%, 60%) 45%  
+        );
+        animation: diagonal 40s infinite;
+        z-index: 1000; /* Ensure the footer is above other elements */
+    }
+    
+    @keyframes diagonal {
+        0% {background-position: 0% 50%}
+        100% {background-position: 100% 50%}
+    }
+}

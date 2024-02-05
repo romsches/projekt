@@ -1,0 +1,1134 @@
+@charset "UTF-8";
+/* Reset and base styles  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+/*
+font-family: 'Poppins', sans-serif;
+*/
+/* Allgemeine Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Header Styles */
+special-header {
+  background-size: 500% 500%;
+  background-image: repeating-linear-gradient(-45deg, hsl(0, 100%, 50%) 0%, hsl(0, 63%, 28%) 15%, hsl(0, 97%, 34%) 30%, hsl(0, 100%, 60%) 45%);
+  animation: diagonal alternate 40s infinite;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 35px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 345px;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+a:hover {
+  color: #333;
+}
+
+.logo {
+  border-radius: 3.5px;
+  overflow: hidden;
+  color: transparent;
+}
+
+/* Footer Styles */
+special-footer {
+  background-size: 500% 500%;
+  background-image: repeating-linear-gradient(-45deg, hsl(0, 100%, 50%) 0%, hsl(0, 63%, 28%) 15%, hsl(0, 97%, 34%) 30%, hsl(0, 100%, 60%) 45%);
+  animation: diagonal alternate 40s infinite;
+  text-align: center;
+}
+
+.filter h2{
+  font-weight: bold;
+}
+
+.filter_btn h2{
+  font-weight: bold;
+}
+
+.footer_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 35px;
+}
+
+.footer_container .logo {
+  margin-left: -45px;
+  padding-left: 0;
+}
+
+.footer_container .links {
+  margin-left: -200px;
+}
+
+.footer_container .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer_container .links li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.footer_container .links a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer_container .links a:hover {
+  color: black;
+}
+
+.footer_container .apps {
+  display: flex;
+  align-items: center;
+}
+
+.footer_container .apps a {
+  display: inline-block;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.footer_container .apps img {
+  width: 30px;
+  margin: 10px;
+}
+
+.footer_container .apps a:hover {
+  transform: scale(1.1);
+}
+
+.footer_container .apps a:active {
+  background-color: white;
+}
+
+.footer_container .links a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+}
+
+.apps {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.apps img {
+  transition: transform 0.3s ease;
+}
+
+.apps:hover img {
+  transform: scale(1.1);
+}
+
+.apps a {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* Header&Footer Background-color */
+@keyframes diagonal {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@media (max-width: 1200px) {
+  header, footer {
+    padding: 20px;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, hsl(0, 100%, 50%) 0%, hsl(0, 63%, 28%) 15%, hsl(0, 97%, 34%) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, rgb(255, 0, 0) 0%, hsl(0, 63%, 28%) 15%, rgb(171, 3, 3) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer_container .links {
+    margin-left: 20px;
+  }
+  .container .logo {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+  nav ul {
+    margin-left: 0;
+  }
+}
+@media (max-width: 998px) {
+  header {
+    padding: 20px;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, hsl(0, 100%, 50%) 0%, hsl(0, 63%, 28%) 15%, hsl(0, 97%, 34%) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    display: flex; /* Stelle den Header-Inhalt als Flexbox dar */
+    justify-content: space-around; /* Platzieren Sie die Elemente gleichmäßig */
+    align-items: center; /* Zentriere den Inhalt vertikal */
+  }
+  header .container {
+    display: flex; /* Stelle den Container als Flexbox dar */
+    justify-content: space-between; /* Platzieren Sie die Elemente gleichmäßig */
+    align-items: center; /* Zentriere den Inhalt vertikal */
+    width: 100%;
+    max-width: 1200px; /* Optional: Setze eine maximale Breite für den Container */
+    margin: 0 auto; /* Optional: Zentriere den Container auf dem Bildschirm */
+  }
+  header .container .logo {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px; /* Füge einen zusätzlichen Abstand zum Logo hinzu */
+    margin-bottom: 10px;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, rgb(255, 0, 0) 0%, hsl(0, 63%, 28%) 15%, rgb(171, 3, 3) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    z-index: 1000;
+    display: flex; /* Stelle den Footer-Inhalt als Flexbox dar */
+    flex-direction: row; /* Ändere die Richtung auf Reihe (row) */
+    justify-content: space-around; /* Platzieren Sie die Elemente gleichmäßig */
+    align-items: center; /* Zentriere den Inhalt vertikal */
+  }
+  .footer_container {
+    display: flex; /* Stelle die Container-Elemente als Flexbox dar */
+    flex-wrap: wrap; /* Ermögliche den Umbruch auf die nächste Zeile, falls nötig */
+    justify-content: center; /* Zentriere die Container horizontal */
+    align-items: center; /* Zentriere die Container vertikal */
+  }
+  .footer_container .links {
+    margin-left: 20px; /* Füge Abstand zwischen den Links hinzu */
+  }
+  @keyframes diagonal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 20px;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, hsl(0, 100%, 50%) 0%, hsl(0, 63%, 28%) 15%, hsl(0, 97%, 34%) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    width: 100%;
+    z-index: 1000;
+    display: flex; /* Stelle den Header-Inhalt als Flexbox dar */
+    justify-content: space-around; /* Platzieren Sie die Elemente gleichmäßig */
+    align-items: center; /* Zentriere den Inhalt vertikal */
+  }
+  header .container {
+    display: flex; /* Stelle den Container als Flexbox dar */
+    justify-content: space-between; /* Platzieren Sie die Elemente gleichmäßig */
+    align-items: center; /* Zentriere den Inhalt vertikal */
+    width: 100%;
+    max-width: 1200px; /* Optional: Setze eine maximale Breite für den Container */
+    margin: 0 auto; /* Optional: Zentriere den Container auf dem Bildschirm */
+  }
+  header .container .logo {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px; /* Füge einen zusätzlichen Abstand zum Logo hinzu */
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, rgb(255, 0, 0) 0%, hsl(0, 63%, 28%) 15%, rgb(171, 3, 3) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    z-index: 1000;
+    display: flex; /* Stelle den Footer-Inhalt als Flexbox dar */
+    flex-direction: row; /* Ändere die Richtung auf Reihe (row) */
+    justify-content: space-around; /* Platzieren Sie die Elemente gleichmäßig */
+    align-items: center; /* Zentriere den Inhalt vertikal */
+  }
+  @keyframes diagonal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+@media (max-width: 576px) {
+  header {
+    padding: 20px;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, hsl(0, 100%, 50%) 0%, hsl(0, 63%, 28%) 15%, hsl(0, 97%, 34%) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    width: 100%;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, rgb(255, 0, 0) 0%, hsl(0, 63%, 28%) 15%, rgb(171, 3, 3) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    z-index: 1000;
+  }
+  @keyframes diagonal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+.section_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-end;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.filter h1 {
+  color: hsl(0, 100%, 50%);
+  font-size: xx-large;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.filter h2 {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.filter select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
+  border: none;
+  width: 200px;
+  height: 40px;
+  background-color: rgb(200, 17, 17);
+  color: aliceblue;
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select optin::-ms-expand {
+  display: none;
+}
+
+.filter_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-end;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.filter_btn [type=date] {
+  background-color: rgb(200, 17, 17);
+  padding: 15px;
+  width: 150px;
+  height: 5px;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+::-webkit-calendar-picker-indicator {
+  background-color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.standorte {
+  display: flex;
+  justify-content: flex-start; /* Adjusted alignment */
+  align-items: center;
+  margin-top: 10px;
+}
+
+table {
+  border-collapse: collapse; /* Added to collapse borders and remove spacing */
+  width: 900px;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid rgb(204, 204, 204); /* Added border style */
+  padding: 5px;
+}
+
+th {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.kontakt p {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.kontakt a {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  color: black;
+  text-decoration-line: underline;
+}
+
+.kontakt a:hover {
+  color: rgb(255, 0, 0);
+}
+
+@media (max-width: 1200px) {
+  .section_container .filter select {
+    text-align: center;
+  }
+  .filter {
+    margin-top: 20%;
+  }
+  @keyframes diagonal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+@media (max-width: 998px) {
+  .section_container .filter select {
+    text-align: center;
+  }
+  table {
+    width: 500px;
+  }
+  .one {
+    width: 25%;
+  }
+  .two {
+    width: 55%;
+  }
+  .three {
+    width: 10%;
+  }
+  .four {
+    width: 10%;
+  }
+  @keyframes diagonal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+@media (max-width: 768px) {
+  table {
+    width: 500px;
+  }
+  .one {
+    width: 25%;
+  }
+  .two {
+    width: 55%;
+  }
+  .three {
+    width: 10%;
+  }
+  .four {
+    width: 10%;
+  }
+  @keyframes diagonal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .section_container {
+    margin-top: 15%;
+  }
+  table {
+    width: 400px;
+  }
+  .one {
+    width: 25%;
+  }
+  .two {
+    width: 55%;
+  }
+  .three {
+    width: 10%;
+  }
+  .four {
+    width: 10%;
+  }
+  @keyframes diagonal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+main {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.section_container, form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-end;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+form label {
+  color: black;
+  display: block;
+  margin-bottom: 10px;
+}
+
+form label h1 {
+  color: hsl(0, 100%, 50%);
+  font-size: xx-large;
+  padding: 10px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.form__checkbox {
+  margin-right: 10px;
+}
+
+label {
+  font-size: 14px;
+}
+
+label span {
+  font-weight: bold;
+  color: #333;
+}
+
+.checkbox input {
+  width: 20px;
+}
+
+form input {
+  width: 300px;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form button {
+  background-color: #ccc;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+form p {
+  align-items: center;
+  padding-top: 5px;
+}
+
+form a {
+  text-decoration-line: underline;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+form a:hover {
+  color: rgb(255, 0, 0);
+}
+
+form button:hover {
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.24), 0 6px 18px 0 rgba(0, 0, 0, 0.19);
+}
+
+form button:active {
+  background-color: rgb(255, 75, 75);
+  opacity: 1s;
+  transform: translateY(2.5px);
+}
+
+/* Media a max-width of 1200px */
+@media (max-width: 1200px) {
+  header {
+    padding: 20px;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, hsl(0, 100%, 50%) 0%, hsl(0, 63%, 28%) 15%, hsl(0, 97%, 34%) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+  }
+  .werbung {
+    margin-bottom: 100px;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed; /* Fixed position to stay in place */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, rgb(255, 0, 0) 0%, hsl(0, 63%, 28%) 15%, rgb(171, 3, 3) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    z-index: 1000;
+  }
+  @keyframes diagonal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+/* Media a max-width of 998px */
+@media (max-width: 998px) {
+  header {
+    padding: 20px;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, hsl(0, 100%, 50%) 0%, hsl(0, 63%, 28%) 15%, hsl(0, 97%, 34%) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    width: 100%;
+  }
+  .section_container {
+    margin-top: 8%;
+  }
+  .werbung {
+    margin-bottom: 120px;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, rgb(255, 0, 0) 0%, hsl(0, 63%, 28%) 15%, rgb(171, 3, 3) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+  }
+  @keyframes diagonal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+/* Media a max-width of 768px */
+@media (max-width: 768px) {
+  header {
+    padding: 20px;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, hsl(0, 100%, 50%) 0%, hsl(0, 63%, 28%) 15%, hsl(0, 97%, 34%) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    width: 100%;
+    z-index: 1000; /* Ensure the header is above other elements */
+  }
+  .werbung {
+    margin-bottom: 100px;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, rgb(255, 0, 0) 0%, hsl(0, 63%, 28%) 15%, rgb(171, 3, 3) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    z-index: 1000; /* Ensure the footer is above other elements */
+  }
+  @keyframes diagonal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+/* Media a max-width of 576px */
+@media (max-width: 576px) {
+  header {
+    padding: 20px;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, hsl(0, 100%, 50%) 0%, hsl(0, 63%, 28%) 15%, hsl(0, 97%, 34%) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    width: 100%;
+  }
+  .section_container {
+    margin-top: 20%;
+  }
+  .werbung {
+    margin-bottom: 120px;
+  }
+  footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, rgb(255, 0, 0) 0%, hsl(0, 63%, 28%) 15%, rgb(171, 3, 3) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    z-index: 1000; /* Ensure the footer is above other elements */
+  }
+  @keyframes diagonal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+main {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.section_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-end;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.section_container label {
+  color: black;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.section_container label h1 {
+  color: hsl(0, 100%, 50%);
+  font-size: xx-large;
+  margin-top: -50px;
+}
+
+.section_container input {
+  width: 300px;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section_container button {
+  background-color: #ccc;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.section_container p {
+  align-items: center;
+  padding-top: 5px;
+}
+
+.section_container a {
+  text-decoration-line: underline;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+.section_container a:hover {
+  color: rgb(255, 0, 0);
+}
+
+.section_container button:hover {
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.24), 0 6px 18px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section_container button:active {
+  background-color: rgb(255, 75, 75);
+  opacity: 1s;
+  transform: translateY(2.5px);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.form__checkbox {
+  margin-right: 10px;
+}
+
+label {
+  font-size: 14px;
+}
+
+label span {
+  font-weight: bold;
+  color: #333;
+}
+
+.checkbox input {
+  width: 20px;
+}
+
+/* Media a max-width of 1200px */
+@media (max-width: 1200px) {
+  header {
+    padding: 20px;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, hsl(0, 100%, 50%) 0%, hsl(0, 63%, 28%) 15%, hsl(0, 97%, 34%) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    width: 100%;
+    z-index: 1000; /* Ensure the header is above other elements */
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, rgb(255, 0, 0) 0%, hsl(0, 63%, 28%) 15%, rgb(171, 3, 3) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    z-index: 1000; /* Ensure the footer is above other elements */
+  }
+  @keyframes diagonal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+/* Media a max-width of 998px */
+@media (max-width: 998px) {
+  header {
+    padding: 20px;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, hsl(0, 100%, 50%) 0%, hsl(0, 63%, 28%) 15%, hsl(0, 97%, 34%) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    width: 100%;
+    z-index: 1000; /* Ensure the header is above other elements */
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, rgb(255, 0, 0) 0%, hsl(0, 63%, 28%) 15%, rgb(171, 3, 3) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    z-index: 1000; /* Ensure the footer is above other elements */
+  }
+  @keyframes diagonal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+/* Media a max-width of 768px */
+@media (max-width: 768px) {
+  header {
+    padding: 20px;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, hsl(0, 100%, 50%) 0%, hsl(0, 63%, 28%) 15%, hsl(0, 97%, 34%) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    width: 100%;
+    z-index: 1000; /* Ensure the header is above other elements */
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, rgb(255, 0, 0) 0%, hsl(0, 63%, 28%) 15%, rgb(171, 3, 3) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    z-index: 1000; /* Ensure the footer is above other elements */
+  }
+  @keyframes diagonal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+/* Media a max-width of 576px */
+@media (max-width: 576px) {
+  header {
+    padding: 5px;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, hsl(0, 100%, 50%) 0%, hsl(0, 63%, 28%) 15%, hsl(0, 97%, 34%) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    width: 100%;
+    z-index: 1000; /* Ensure the header is above other elements */
+  }
+  footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(-45deg, rgb(255, 0, 0) 0%, hsl(0, 63%, 28%) 15%, rgb(171, 3, 3) 30%, hsl(0, 100%, 60%) 45%);
+    animation: diagonal 40s infinite;
+    z-index: 1000; /* Ensure the footer is above other elements */
+  }
+  @keyframes diagonal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/views/css/main.css">
+</head>
+<body>
+    <special-header></special-header>
+
+    <main>
+        <section>
+            <form action="/login" method="post">
+                <label for="SpenderID">SpenderID:</label>
+                <input type="number" name="SpenderID" id="SpenderID" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+
+    <special-footer></special-footer>
+    <script src="/views/main.js"></script>
+</body>
+</html>

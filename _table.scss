@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+.section_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.filter h1{
+    color: hsl(0, 100%, 50%);
+    font-size: xx-large;
+    margin-bottom: 20px; 
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.filter h2{ 
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.filter select {
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 200px; 
+    height: 40px;
+    background-color: rgb(200, 17, 17);
+    color: aliceblue;
+    font-size: 16px;
+    margin-bottom: 5px; 
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select optin::-ms-expand {
+    display: none;
+}
+
+.filter_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    
+}
+
+.filter_btn [type="date"]{
+    background-color: rgb(200, 17, 17);
+    padding: 15px;
+    width: 150px;
+    height: 5px;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.standorte {
+    display: flex;
+    justify-content: flex-start; /* Adjusted alignment */
+    align-items: center;
+    margin-top: 10px;
+}
+
+table {
+    border-collapse: collapse; /* Added to collapse borders and remove spacing */
+    width: 900px;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid rgb(204, 204, 204); /* Added border style */
+    padding: 5px;
+}
+
+th {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.kontakt p {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.kontakt a {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    color: black;
+    text-decoration-line: underline;
+}
+
+.kontakt a:hover {
+    color: rgb(255, 0, 0);
+}
+
+@media (max-width: 1200px) {
+
+    .section_container .filter select{
+        text-align: center;
+    }
+
+    .filter {
+        margin-top: 20%;
+    }
+
+    @keyframes diagonal {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+}
+
+@media (max-width: 998px) {
+
+    .section_container .filter select{
+        text-align: center;
+    }
+
+    table {
+        width: 500px;
+    }
+
+    .one {
+        width: 25%;
+    }
+
+    .two {
+        width: 55%;
+    }
+
+    .three {
+        width: 10%;
+    }
+
+    .four {
+        width: 10%;
+    }
+
+    @keyframes diagonal {
+        0% {background-position: 0% 50%}
+        100% {background-position: 100% 50%}
+    }
+}
+
+@media (max-width: 768px) {
+
+    table {
+        width: 500px;
+    }
+
+    .one {
+        width: 25%;
+    }
+
+    .two {
+        width: 55%;
+    }
+
+    .three {
+        width: 10%;
+    }
+
+    .four {
+        width: 10%;
+    }
+
+    @keyframes diagonal {
+        0% {background-position: 0% 50%}
+        100% {background-position: 100% 50%}
+    }
+}
+
+@media (max-width: 576px) {
+    .section_container {
+        margin-top: 15%;
+    }
+
+    table {
+        width: 400px;
+    }
+
+    .one {
+        width: 25%;
+    }
+
+    .two {
+        width: 55%;
+    }
+
+    .three {
+        width: 10%;
+    }
+
+    .four {
+        width: 10%;
+    }
+
+    @keyframes diagonal {
+        0% {background-position: 0% 50%}
+        100% {background-position: 100% 50%}
+    }
+}

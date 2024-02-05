@@ -1,0 +1,103 @@
+<% var alreadyRendered = false; %>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="/views/css/main.css">
+</head>
+<body>
+    <!-- Benutzerdefiniertes Header-Element einbinden -->
+    <special-header></special-header>
+    
+    <main>
+        <section class="section_container">
+            <div>
+                <div class="filter">
+                    <h1>Nächste Blutspende-Termine</h1>
+                    <div>
+                        <!-- Bedingte Anzeige für Spende-Berechtigung -->
+                        <% if (canDonate) { %>
+                            <p>Sie dürfen spenden</p>
+                            <!-- ... Aktueller Tabellen-Code ... -->
+                        <% } else if (!alreadyRendered) { %>
+                            <% alreadyRendered = true; %>
+                            <p>Sie können derzeit nicht spenden.</p>
+                            <div id="meeting-table-placeholder">Die Tabelle ist derzeit nicht verfügbar.</div>
+                        <% } %>
+                    </div>
+                    <h2>Filtern nach Ort</h2>
+                    <!-- Dropdown-Menü für Standortfilter -->
+                    <select id="location-filter" name="location" onchange="updateTable()">
+                        <option value="Alle Standorte">Alle Standorte</option>
+                        <option value="Mannheim">Mannheim</option>
+                        <option value="Baden-Baden">Baden-Baden</option>
+                        <option value="Ulm">Ulm</option>
+                        <option value="Tübingen">Tübingen</option>
+                        <option value="Frankfurt-am-Main">Frankfurt-am-Main</option>
+                        <option value="Kassel">Kassel</option>
+                    </select>
+
+                    <div class="filter_btn">
+                        <h2>Datum auswählen</h2>
+                        <!-- Eingabefeld für Datum -->
+                        <input type="date" name="date" id="dtm" maxlength="4" pattern="\d{4}" title="Vier Ziffern für das Jahr eingeben" required>
+                        <!-- Button zum Aktualisieren der Tabelle -->
+                        <button id="updateButton" onclick="updateTable()">Aktualisieren</button>
+                    </div>
+                </div>
+            </div>
+            <div class="standorte">
+                <!-- Bedingte Anzeige für Spende-Berechtigung -->
+                <% if (canDonate) { %>
+                    
+                    <!-- Tabelle für Spendertermine -->
+                    <table id="meeting-table" border="1">
+                        <thead>
+                            <tr>
+                                <th class="one">Datum</th>
+                                <th class="two">Ort</th>
+                                <th class="three">Uhrzeit</th>
+                                <th class="four">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Schleife für das Rendern der Spendertermine -->
+                            <% for (let i = 0; i < meetings.length; i++) { %>
+                                <tr>
+                                    <!-- Umwandlung des Datumsformats -->
+                                    <td><%= new Date(meetings[i].Datum).toLocaleDateString('de-DE') %></td>
+                                    <td><%= meetings[i].Ort %></td>
+                                    <td><%= meetings[i].Uhrzeit %></td>
+                                    <td><%= meetings[i].Status %></td>
+                                </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                <% } else if (!alreadyRendered) { %>
+                    <!-- Wenn nicht spenden darf, Meldungen anzeigen -->
+                    <% alreadyRendered = true; %>
+                    <div id="donation-info">
+                        <p>Sie können derzeit nicht spenden.</p>
+                    </div>
+                    <div id="no-donation-info">
+                        <p>Die Tabelle ist derzeit nicht verfügbar.</p>
+                    </div>
+                <% } %>
+            </div>
+            <div class="kontakt">
+                <p>Haben Sie Fragen?</p>
+                <p>Kontaktieren Sie unsere Hotline.</p>
+                <a href="">Kontakt aufnehmen</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Benutzerdefiniertes Footer-Element einbinden -->
+    <special-footer></special-footer>
+    
+    <!-- Externe JavaScript-Datei einbinden -->
+    <script src="/views/main.js"></script>
+</body>
+</html>
